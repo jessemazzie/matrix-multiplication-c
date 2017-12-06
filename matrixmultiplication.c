@@ -5,10 +5,12 @@ void getMatrixSize(int *rows, int *columns, char fileName[20]);
 
 int main(int argc, char *argv[]) {
     int rows = 0, columns = 0;
+
     if(argc <= 2) {
         printf("At least two CSV files (supplied via command line argument) are required. Exiting...\n");
         exit(0);
     }
+    
     printf("%i\n\n", argc);
     printf("%s", argv[1]);
     getMatrixSize(&rows, &columns, argv[1]);
